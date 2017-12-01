@@ -1,0 +1,31 @@
+body {
+	background: #DCDCDC;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	width: 25%;
+	margin: 60px auto 0px;
+	color: white;
+	background: #20B2AA;
+	text-align: center;
+	padding: 10px;
+}
+
+form {
+	width: 25%;
+	margin: 0px auto;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.input input {
+	padding: 5px 5px;
+	border-radius: 5px;
+}
