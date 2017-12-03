@@ -4,24 +4,13 @@
   User: gt86
   Title: Todo Task Management Application
 */
-//connecting to the database
-define('DATABASE','gt86');
-define('USERNAME', 'gt86');
-define('PASSWORD', 'RAFRIUUsM');
-define('SERVER', 'sql2.njit.edu');
 
-class dbConn {
-  protected static $db;
-  private function __construct() {
-  	try {
-  		self::$db = new PDO('mysql:host=' . SERVER . ';dbname=' . DATABASE, USERNAME, PASSWORD);
-  		self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  	}
-  	catch(PDOException $e) {
-      echo "Connection failed" . '<br>' . $e->getMessage();
-  	}
-  }
-}
+//turn on display errors
+  ini_set('display_errors', 'On');
+  error_reporting(E_ALL);
+ //load different files
+  include_once "autoload.php";
+  include_once "database.php";
 ?>
 
 <html>
@@ -37,13 +26,15 @@ class dbConn {
   <h2>Create an account</h2>
   
     <form action= "index.php" method= "post" enctype= "multipart/form-data">
+      <div class= "warning-error"><?php $_SESSION['message']?></div>
       <div class="input">	
+      <!--validation applied-->
   	  <input type="text" placeholder="Username" name="username" required /><br><br>
   	  <input type="email" placeholder="Email" name="email" required /><br><br>
   	  <input type="text" placeholder="Firstname" name="firstname" required /><br><br>
   	  <input type="text" placeholder="Lastname" name="lastmname" required /><br><br>
   	  <input type="password" placeholder="Password" name="password" required /><br><br>
-  	  <input type="password" placeholder="Confirm Password" name="confirm password" required /><br><br>
+  	  <input type="password" placeholder="Confirm Password" name="confirmpassword" required /><br><br>
   	  </div>
   	  <input type="submit" value="Register">
   	
