@@ -1,6 +1,11 @@
 <?php
 
+/*Created by using Sublime Text*/
+
+//adding routes
+//matches URLs and request methods with the controller and method
 class routes {
+	
 	public static function getRoutes() {
 		$route = new route();
 		$route->http_method = 'GET';
@@ -63,7 +68,6 @@ class routes {
 		$route->controller = 'accountsController';
 		$route->method = 'login';
 		$route[] = $route;
-
 		
         //create tasks
         $route = new route();
@@ -94,4 +98,11 @@ class routes {
         
         return $routes;
 	}
+}
+
+class route {
+	public $page;
+	public $action;
+	public $method;
+	public $controller;
 }
