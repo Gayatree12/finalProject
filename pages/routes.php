@@ -1,9 +1,12 @@
 <?php
 
-/*Created by using Sublime Text*/
+/*Created by using Sublime Text
+  User: gt86
+*/
 
 //adding routes
 //matches URLs and request methods with the controller and method
+
 class routes {
 	
 	public static function getRoutes() {
@@ -11,7 +14,7 @@ class routes {
 		$route->http_method = 'GET';
 		$route->page = 'homepage';
 		$route->action = 'show';
-		$route->controller = 'homepageController';
+		$route->controller = 'homepage';
 		$route->method = 'show';
 		$route[] = $route;
 
@@ -20,7 +23,7 @@ class routes {
 		$route->http_method = 'POST';
 		$route->page = 'homepage';
 		$route->action = 'create';
-		$route->controller = 'homepageController';
+		$route->controller = 'homepage';
 		$route->method = 'create';
 		$route[] = $route;
 
@@ -29,7 +32,7 @@ class routes {
 		$route->http_method = 'GET';
 		$route->page = 'tasks';
 		$route->action = 'show';
-		$route->controller = 'tasksController';
+		$route->controller = 'tasks';
 		$route->method = 'show';
 		$route[] = $route;
 
@@ -38,7 +41,7 @@ class routes {
 		$route->http_method = 'GET';
 		$route->page = 'tasks';
 		$route->action = 'all';
-		$route->controller = 'tasksController';
+		$route->controller = 'tasks';
 		$route->method = 'all';
 		$route[] = $route;
 
@@ -47,7 +50,7 @@ class routes {
 		$route->http_method = 'GET';
 		$route->page = 'accounts';
 		$route->action = 'all';
-		$route->controller = 'accountsController';
+		$route->controller = 'accounts';
 		$route->method = 'all';
 		$route[] = $route;
         
@@ -56,7 +59,7 @@ class routes {
 		$route->http_method = 'GET';
 		$route->page = 'accounts';
 		$route->action = 'show';
-		$route->controller = 'accountsController';
+		$route->controller = 'accounts';
 		$route->method = 'show';
 		$route[] = $route;
 
@@ -65,25 +68,25 @@ class routes {
 		$route->http_method = 'POST';
 		$route->page = 'accounts';
 		$route->action = 'login';
-		$route->controller = 'accountsController';
+		$route->controller = 'accounts';
 		$route->method = 'login';
 		$route[] = $route;
 		
-        //create tasks
-        $route = new route();
+    //create tasks
+    $route = new route();
 		$route->http_method = 'POST';
 		$route->page = 'tasks';
 		$route->action = 'create';
-		$route->controller = 'tasksController';
+		$route->controller = 'tasks';
 		$route->method = 'create';
 		$route[] = $route;
 
 		//delete tasks
-        $route = new route();
+    $route = new route();
 		$route->http_method = 'POST';
 		$route->page = 'tasks';
 		$route->action = 'delete';
-		$route->controller = 'tasksController';
+		$route->controller = 'tasks';
 		$route->method = 'delete';
 		$route[] = $route;
 
@@ -92,11 +95,11 @@ class routes {
 		$route->http_method = 'POST';
 		$route->page = 'tasks';
 		$route->action = 'edit';
-		$route->controller = 'tasksController';
+		$route->controller = 'tasks';
 		$route->method = 'edit';
 		$route[] = $route;
         
-        return $routes;
+    return $routes;
 	}
 }
 
