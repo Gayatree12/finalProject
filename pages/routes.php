@@ -10,6 +10,7 @@
 class routes {
 	
 	public static function getRoutes() {
+        //index.php route for GET
 		$route = new route();
 		$route->http_method = 'GET';
 		$route->page = 'homepage';
@@ -27,7 +28,7 @@ class routes {
 		$route->method = 'create';
 		$route[] = $route;
 
-		//POST for tasks to show a task
+		//to show a task
 		$route = new route();
 		$route->http_method = 'GET';
 		$route->page = 'tasks';
@@ -72,8 +73,8 @@ class routes {
 		$route->method = 'login';
 		$route[] = $route;
 		
-    //create tasks
-    $route = new route();
+        //create tasks
+        $route = new route();
 		$route->http_method = 'POST';
 		$route->page = 'tasks';
 		$route->action = 'create';
@@ -82,7 +83,7 @@ class routes {
 		$route[] = $route;
 
 		//delete tasks
-    $route = new route();
+        $route = new route();
 		$route->http_method = 'POST';
 		$route->page = 'tasks';
 		$route->action = 'delete';
@@ -100,6 +101,16 @@ class routes {
 		$route[] = $route;
         
     return $routes;
+	}
+
+	public static function create($http_method,$action,$page,$controller,$method) {
+		$route = new route();
+		$route->http_method = $http_method;
+		$route->page = $page;
+		$route->action = $action;
+		$route->controller = $controller;
+		$route->method = $method;
+
 	}
 }
 
