@@ -15,12 +15,18 @@ final class account extends \database\model {
         return $tableName;
     }
     
-    public static function findTasks()
-    {
+    public static function findOne($id) {
         
-        $records = todos::findAll();
-        print_r($records);
-        return $records;
+      $db = dbConn::getConnection();
+      $tableName = get_called_class();
+      $sql = 'SELECT * FROM ' . $tableName . ' WHERE id =' . $id;
+      $statement = $db->prepare($sql);
+      $statement->execute();
+      $class = static::$modelName;
+      $statement->setFetchMode(PDO::FETCH_CLASS, $class);
+      $records =  $statement->fetchAll();
+      return $records;
+
     }
     
     public function setPassword($password) {
