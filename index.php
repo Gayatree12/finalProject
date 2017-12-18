@@ -9,16 +9,16 @@ Project Title: Todo Task Management Application
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
-//to load all the different directories
+//autoloader class to load all the different directories
 include_once "autoload.php";
 
-//database credentials
+//database credentials here
 include_once "database.php";
 
-//this starts the program as a static. Trace the program from here.  
+//this starts the program as a static. Trace the program from here
 $response = http\processRequest::createResponse();
-
 ?>
+
 
 
 
