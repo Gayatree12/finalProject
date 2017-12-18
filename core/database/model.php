@@ -1,19 +1,17 @@
 <?php
-namespace database;
 
-use http\controller;
+  namespace database;
 
-abstract class model
-{
+  use http\controller;
 
-    public function save()
-    {
+  abstract class model {
+
+    public function save() {
 
         if($this->validate() == FALSE) {
             echo 'failed validation';
             exit;
         }
-
 
         if ($this->id != '') {
             $sql = $this->update();
@@ -26,9 +24,7 @@ abstract class model
         $array = get_object_vars($this);
 
         if ($INSERT == TRUE) {
-
             unset($array['id']);
-
         }
 
         foreach (array_flip($array) as $key => $value) {
@@ -36,19 +32,12 @@ abstract class model
         }
         $statement->execute();
         if ($INSERT == TRUE) {
-
             $this->id = $db->lastInsertId();
-
         }
-
-
         return $this->id;
         }
 
-
-
-    private function insert()
-    {
+    private function insert() {
 
         $modelName = static::$modelName;
         $tableName = $modelName::getTablename();
@@ -65,8 +54,7 @@ abstract class model
         return TRUE;
     }
 
-    private function update()
-    {
+    private function update() {
 
         $modelName = static::$modelName;
         $tableName = $modelName::getTablename();
@@ -85,8 +73,7 @@ abstract class model
 
     }
 
-    public function delete()
-    {
+    public function delete() {
         $db = dbConn::getConnection();
         $modelName = static::$modelName;
         $tableName = $modelName::getTablename();
