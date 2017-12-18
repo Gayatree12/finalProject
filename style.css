@@ -1,0 +1,49 @@
+
+h1 {
+
+text-align: center;
+}
+
+body {
+
+background-image: url("http://vunature.com/wp-content/uploads/2017/02/landscapes-villa-cottage-house-country-road-tuscany-nature-wallpaper-for-iphone-5s.jpg");
+}
+
+.container input[type=text] {
+	padding: 5px 5px;
+	border-radius: 5px;
+ }
+
+ .container input[type=password] {
+	padding: 5px 5px;
+	border-radius: 5px;
+ }
+
+.container input[type=email] {
+	padding: 5px 5px;
+	border-radius: 5px;
+ }
+
+.container input[type=tel] {
+	padding: 5px 5px;
+	border-radius: 5px;
+ }
+
+ form {
+	width: 25%;
+	margin: 0px auto;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #B0C4DE;
+	background: white;
+	border-radius: 0px 0px 10px 10px;
+}
+
+h2 {
+	width: 25%;
+	margin: 60px auto 0px;
+	color: white;
+	background: Tomato;
+	text-align: center;
+	padding: 10px;
+}
