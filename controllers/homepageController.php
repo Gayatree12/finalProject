@@ -1,6 +1,6 @@
 <?php
 
-class homepageController extends http\controller {
+  class homepageController extends http\controller {
 
     public static function show() {
 		
