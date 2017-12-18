@@ -1,15 +1,16 @@
 <?php
 
 final class todo extends database\model {
-    public $id;
-    public $owneremail;
+    public $id;    
     public $ownerid;
-    public $createddate;
-    public $duedate;
-    public $message;
+    public $createddate;	
+    public $updateddate;
     public $isdone;
     protected static $modelName = 'todo';
-    public static function getTablename() {    
+   
+    //get table    
+    public static function getTablename() {
+
         $tableName = 'todos';
         return $tableName;
     }
