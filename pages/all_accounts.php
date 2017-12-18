@@ -19,7 +19,8 @@
 
 <h2>Account Details</h2>
 
-  <?php    
+  <?php
+    $userID = $_SESSION["userID"];  
     $user_data = accounts::findUserbyId($userID);
   ?>
 
